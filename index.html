@@ -13,6 +13,50 @@
 
 <body>
 
+    <div class="wrapper">
+        <ul class="mainMenu">
+            <li class="item">
+                <a href="#">صفحه اصلی</a>
+            </li>
+            <li class="item">
+                <a onclick="showSubMenu1()" class="show-subMenu-1" href="#">دوره های آموزشی</a>
+                <div class="subMenu">
+                    <a href="#">پایتون</a>
+                    <a href="#">طراحی وب</a>
+                    <a href="#">بک اند وب</a>
+                    <a href="#">داده کاوی</a>
+                </div>
+            </li>
+            <li class="item">
+                <a href="#">درباره ما</a>
+            </li>
+            <li class="item">
+                <a onclick="showSubMenu2()" class="show-subMenu-2" href="#">تماس با ما</a>
+                <div class="subMenu">
+                    <a href="#">واتساپ</a>
+                    <a href="#">تلگرام</a>
+                    <a href="#">توییتر</a>
+                    <a href="#">اینستاگرام</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    </div>
+    <script>
+        function showSubMenu1() {
+            const collapseBtn = document.querySelector(".show-subMenu-1").classList;
+            collapseBtn.toggle("active");
+        }
+        function showSubMenu2() {
+            const collapseBtn = document.querySelector(".show-subMenu-2").classList;
+            collapseBtn.toggle("active");
+        }
+
+    </script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"

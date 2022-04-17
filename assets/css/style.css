@@ -1,2 +1,134 @@
 @import url(./_font.css);
 @import url(./_grid.css);
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  direction: rtl;
+}
+.flex {
+  display: flex;
+}
+a {
+  text-decoration: none;
+}
+li,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  padding: 100px 0;
+  position: fixed;
+  background-color: #dfd2d7;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.wrapper .mainMenu {
+  position: absolute;
+  width: 250px;
+  min-height: 250px;
+  border-radius: 10px;
+  background-color: #fa5041;
+  z-index: 1000;
+}
+
+.mainMenu .item {
+  width: 100%;
+  border-bottom: 1px solid #efefef56;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainMenu .item:last-child {
+  border-bottom: none;
+}
+
+.item a {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  font-family: mikhak;
+  font-weight: bold;
+}
+
+.item > a:hover {
+  color: rgb(21, 35, 83);
+}
+
+.subMenu {
+  width: 100%;
+  max-height: 0;
+  background-color: rgb(21, 35, 83);
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.subMenu a {
+  color: #efefef;
+  font-size: 13px;
+  font-family: vazir !important;
+  font-weight: 300;
+}
+
+.subMenu a:hover {
+  color: #fa5041;
+  background: linear-gradient(
+    to bottom,
+    rgb(21, 35, 83) 0%,
+    rgb(21, 35, 83) 50%,
+    rgba(38, 62, 141, 0.651) 100%
+  );
+}
+
+.subMenu > a:hover::before,
+.subMenu > a:hover::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+}
+
+.subMenu > a:hover::before {
+  content: "";
+  border-top: 20px solid rgb(21, 35, 83);
+  border-right: 11px solid #dfd2d7;
+  border-bottom: 20px solid rgba(38, 62, 141, 0.651);
+  right: 0;
+}
+.subMenu > a:hover::after {
+  content: "";
+  left: 0;
+  border-top: 20px solid rgb(21, 35, 83);
+  border-left: 11px solid #dfd2d7;
+  border-bottom: 20px solid rgba(38, 62, 141, 0.651);
+}
+.active ~ .subMenu {
+  transition: 0.5s;
+  max-height: 250px !important;
+}
+
+.test {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.blue {
+  background-color: blue !important;
+}
